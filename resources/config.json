@@ -1,0 +1,17 @@
+{
+  "telegram": {
+    "token": "6328368552:AAFzUsJGCgYnyEHCcRDoWoNZK0G7I_PSrtY"
+  },
+  "twitch": {
+    "token": "123"
+  },
+  "redis": {
+    "host": "194.190.152.141",
+    "port": 6379,
+    "password": "redisphotobattlE"
+  },
+  "logger": {
+    "level": "DEBUG"
+  },
+  "defaultAdminListByTelegramUid": [867855173]
+}

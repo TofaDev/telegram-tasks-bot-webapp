@@ -1,0 +1,25 @@
+{
+  "name": "photobattle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/Application.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.2.0",
+    "@types/ioredis": "^5.0.0",
+    "ioredis": "^5.3.2",
+    "middleware-io": "^2.8.1",
+    "puregram": "^2.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.3",
+    "prisma": "^5.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

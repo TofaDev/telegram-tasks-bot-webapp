@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../resources/database.db"
+}
+
+model Viewer {
+  id               Int         @id @default(autoincrement())
+  telegramUid      BigInt         @unique
+  registrationDate DateTime    @default(now())
+  TwitchLink       TwitchLink?
+  role             String      @default("DEFAULT")
+  messages         Message[]
+}
+
+model TwitchLink {
+  id           Int    @id @default(autoincrement())
+  twitchId     String @unique
+  viewerId     Int    @unique
+  viewer       Viewer @relation(fields: [viewerId], references: [id])
+  messages      Message[]
+}
+
+model Message {
+  id            Int      @id @default(autoincrement())
+  date          DateTime
+  count         Int
+  viewerId      Int
+  viewer        Viewer   @relation(fields: [viewerId], references: [id])
+  twitchLinkId  Int
+  twitchLink    TwitchLink @relation(fields: [twitchLinkId], references: [id])
+}

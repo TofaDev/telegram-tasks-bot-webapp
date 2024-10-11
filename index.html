@@ -18,6 +18,7 @@
 
             // Отправляем данные обратно в бота
             Telegram.WebApp.sendData(timezone); // отправляем часовой пояс боту
+            Telegram.WebApp.close() // Закрываю приложение, поскольку данные отправлены
         </script>
     </body>
 </html>

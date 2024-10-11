@@ -9,5 +9,15 @@
     <body>
         <h1>Welcome to the Telegram WebApp</h1>
         <p>Your timezone will be sent to the bot automatically.</p>
+        <script>
+            // Получение часовой зоны через браузер
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            // Инициализируем WebApp API
+            Telegram.WebApp.ready();
+
+            // Отправляем данные обратно в бота
+            Telegram.WebApp.sendData(timezone); // отправляем часовой пояс боту
+        </script>
     </body>
 </html>
